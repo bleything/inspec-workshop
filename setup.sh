@@ -17,3 +17,5 @@
 
 bundle install
 sudo ln -s ~/.gems/bin/inspec /usr/local/bin/inspec
+
+inspec exec profiles/00-setup-local
