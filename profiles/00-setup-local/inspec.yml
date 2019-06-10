@@ -1,0 +1,9 @@
+name: 00-setup-local
+version: 0.1.0
+
+title: InSpec Workshop Local Environment
+summary: Validates that your local environment is set up correctly
+maintainer: Ben Bleything
+
+copyright: Google LLC
+license: Apache-2.0
