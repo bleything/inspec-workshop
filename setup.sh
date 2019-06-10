@@ -16,3 +16,4 @@
 #
 
 bundle install
+sudo ln -s ~/.gems/bin/inspec /usr/local/bin/inspec
