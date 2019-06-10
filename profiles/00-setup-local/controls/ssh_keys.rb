@@ -1,4 +1,3 @@
-#!/bin/bash
 #
 # Copyright 2019 Google LLC
 #
@@ -15,16 +14,18 @@
 # limitations under the License.
 #
 
-bundle install
-sudo ln -sf ~/.gems/bin/inspec /usr/local/bin/inspec
+control 'ssh keys' do
+  impact "critical"
+  title "SSH keys"
+  desc "verifies that the SSH keys are in place"
 
-if [[ ! -f ~/.ssh/id_rsa ]]; then
-    ssh-keygen -t rsa -b 4096 -a 100 -N "" -f ~/.ssh/id_rsa
-fi
+  describe file("#{ENV['HOME']}/.ssh/id_rsa.pub") do
+    it { should exist }
+  end
 
-formatted_key_path=${HOME}/.ssh/gcloud-ssh-pubkey
-echo -n "$USER:" > $formatted_key_path
-cat ~/.ssh/id_rsa.pub >> $formatted_key_path
-gcloud compute project-info add-metadata --metadata-from-file ssh-keys=$formatted_key_path
-
-inspec exec profiles/00-setup-local
+  describe file("#{ENV['HOME']}/.ssh/gcloud-ssh-pubkey") do
+    it { should exist }
+    its('content') { should match /^#{ENV['USER']}:ssh-rsa / }
+    its('content') { should match(/ #{ENV['USER']}@/) }
+  end
+end
