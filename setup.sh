@@ -15,6 +15,10 @@
 # limitations under the License.
 #
 
+if [[ -z $GOOGLE_CLOUD_PROJECT ]]; then
+    gcloud config set project ${USER/devstar/inspec-velocity19-sjc-}
+fi
+
 bundle install
 sudo ln -sf ~/.gems/bin/inspec /usr/local/bin/inspec
 
