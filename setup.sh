@@ -27,8 +27,10 @@ if [[ ! -f ~/.ssh/id_rsa ]]; then
 fi
 
 formatted_key_path=${HOME}/.ssh/gcloud-ssh-pubkey
-echo -n "$USER:" > $formatted_key_path
-cat ~/.ssh/id_rsa.pub >> $formatted_key_path
-gcloud compute project-info add-metadata --metadata-from-file ssh-keys=$formatted_key_path
+if [[ ! -f $formatted_key_path ]]; then
+    echo -n "$USER:" > $formatted_key_path
+    cat ~/.ssh/id_rsa.pub >> $formatted_key_path
+    gcloud compute project-info add-metadata --metadata-from-file ssh-keys=$formatted_key_path
+fi
 
 inspec exec profiles/00-setup-local
