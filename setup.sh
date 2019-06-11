@@ -33,4 +33,4 @@ if [[ ! -f $formatted_key_path ]]; then
     gcloud compute project-info add-metadata --metadata-from-file ssh-keys=$formatted_key_path
 fi
 
-inspec exec profiles/00-setup-local
+echo "All set!"
