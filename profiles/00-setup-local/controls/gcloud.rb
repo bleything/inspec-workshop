@@ -19,17 +19,7 @@ control 'gcloud' do
   title "gcloud CLI"
   desc "Verifies that `gcloud` is installed and configured"
 
-  describe os_env("GOOGLE_CLOUD_PROJECT") do
-    its('content') { should match /^inspec-velocity19-sjc-5[12]\d\d$/ }
-  end
-
   describe command("gcloud") do
     it { should exist }
-  end
-
-  project_id = ENV['GOOGLE_CLOUD_PROJECT']
-  describe command("gcloud projects describe #{project_id}") do
-    its('exit_status') { should eq 0 }
-    its('stdout') { should include project_id }
   end
 end

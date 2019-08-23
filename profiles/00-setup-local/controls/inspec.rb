@@ -19,13 +19,18 @@ control 'inspec' do
   title "inspec CLI"
   desc "Verifies that `inspec` is installed and configured"
 
-  describe file("/usr/local/bin/inspec") do
-    it { should be_symlink }
-    its('link_path') { should eq "#{ENV['HOME']}/.gems/bin/inspec" }
+  describe package("inspec") do
+    it { should be_installed }
+    its('version') { should cmp >= '4.12.0-1' }
+    its('version') { should cmp <  '5.0' }
   end
 
-  describe command("inspec -v") do
-    its("exit_status") { should eq 0 }
-    its('stdout') { should cmp > "4.3" }
+  describe file("/usr/bin/inspec") do
+    it { should be_file }
+    it { should be_executable }
+  end
+
+  describe file("/etc/chef/accepted_licenses/inspec") do
+    it { should exist }
   end
 end
