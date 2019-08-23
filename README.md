@@ -10,7 +10,7 @@ workshop, but don't let that stop you from poking around.
 If you _are_ participating in the workshop, great! Welcome! Here's the giant
 "Open in Cloud Shell" button I mention during the intro. You should click it!
 
-[![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fbleything%2Finspec-workshop)
+[![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fbleything%2Finspec-workshop&cloudshell_image=gcr.io%2Fossummit-2019-inspec-tutorial%2Fworkshop-cloud-shell)
 
 Ownership and License
 --------------------------------------------------------------------------------
