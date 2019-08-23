@@ -1,0 +1,10 @@
+
+Congrats! You're ready to move on to the next step. Try running this:
+
+  $ inspec exec profiles/00-setup-local
+
+It should come back all green. If so, great! If you have some failing tests,
+please raise your hand so we can help you out.
+
+Once you're done, sit back and relax. We'll start up again shortly.
+
