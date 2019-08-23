@@ -1,10 +1,16 @@
 Infrastructure and Compliance Testing with Chef InSpec
 ================================================================================
 
-This repository contains the support materials for the [InSpec workshop]
-delivered at the O'Reilly Velocity Conference.
+This repository contains the support materials for Ben Bleything's [InSpec]
+workshop. It's probably not very interesting if you're not participating in the
+workshop, but don't let that stop you from poking around.
 
-[InSpec workshop]: https://conferences.oreilly.com/velocity/vl-ca/public/schedule/detail/78250
+[InSpec]: https://www.inspec.io
+
+If you _are_ participating in the workshop, great! Welcome! Here's the giant
+"Open in Cloud Shell" button I mention during the intro. You should click it!
+
+[![Open in Cloud Shell](//gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/bleything/inspec-workshop)
 
 Ownership and License
 --------------------------------------------------------------------------------
