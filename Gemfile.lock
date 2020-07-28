@@ -141,7 +141,7 @@ GEM
     inspec-bin (4.3.2)
       inspec (= 4.3.2)
     jmespath (1.4.0)
-    json (2.2.0)
+    json (2.3.1)
     jwt (2.2.1)
     license-acceptance (1.0.12)
       pastel (~> 0.7)
