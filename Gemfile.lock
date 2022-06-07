@@ -140,7 +140,7 @@ GEM
       tty-table (~> 0.10)
     inspec-bin (4.3.2)
       inspec (= 4.3.2)
-    jmespath (1.4.0)
+    jmespath (1.6.1)
     json (2.2.0)
     jwt (2.2.1)
     license-acceptance (1.0.12)
